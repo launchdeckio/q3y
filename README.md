@@ -24,10 +24,7 @@ const $ = qrry({
     me: {
         posts: byKey('slug')(({userId}, {path}) => {
             
-            // Works with promises!
-            if(!path) return Post.find({userId});
-            
-            else return Post.find({userId, slug: path});
+            return path.length ? Post.find({userId, slug: path[0]}) : Post.find({userId});
         }),
     },
 });

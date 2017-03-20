@@ -25,9 +25,9 @@ describe('qrry', () => {
     let resolver = {
         user: {
             apps:        deep(1)((userId, {path}) => {
-                if (!path) return pickBy(apps, app => app.userId === userId);
+                if (!path.length) return pickBy(apps, app => app.userId === userId);
                 else {
-                    let app = get(apps, path);
+                    let app = get(apps, path[0]);
                     if (app && app.userId === userId) return app;
                 }
             }),
@@ -91,8 +91,8 @@ describe('qrry', () => {
         let resolver;
 
         let makeAppResolver = appName => (_, {path}) => {
-            if (!path) return {name: appName};
-            if (path === 'name') return appName;
+            if (!path.length) return {name: appName};
+            if (path[0] === 'name') return appName;
             // else return Promise.reject(new NoDataAtPathError(path));
             throw new NoDataAtPathError(path);
         };

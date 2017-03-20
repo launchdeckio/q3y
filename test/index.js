@@ -7,7 +7,7 @@ const expect = require('./support/index');
 const NoDataAtPathError = require('./../lib/errors/NoDataAtPathError');
 
 const deep = require('./../lib/higherOrder/deep');
-const qrry = require('./../lib');
+const qrry = require('./../');
 
 const resolve = (resolver, query, context) => {
 

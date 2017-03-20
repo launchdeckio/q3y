@@ -9,7 +9,9 @@
 
 ### wtf?
 
-This module allows you to define a tree-shaped structure that holds all accessible data.
+This module allows you to define a tree-shaped structure that holds all accessible data,
+and query the data at different levels. By using on-demand resolvers (just functions, really),
+only the requested data will be computed.
 
 #### Example
 

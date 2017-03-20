@@ -22,9 +22,9 @@ const Post = require('./models/Post');
 
 const $ = qrry({
     me: {
-        posts: byKey('slug')(({userId}, {path}) => {
+        posts: byKey('slug')(({userId}) => {
             
-            return path.length ? Post.find({userId, slug: path[0]}) : Post.find({userId});
+            return Post.find({userId});
         }),
     },
 });

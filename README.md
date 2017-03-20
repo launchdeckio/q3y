@@ -30,11 +30,11 @@ const $ = qrry({
     },
 });
 
-$('/me/posts').then(console.log);
+$('/me/posts', {userId: 1}).then(console.log);
 
 // {me: { 
 //    posts: {
-//       coolPost: {id: 1, slug: "coolPost", content: "..."}
+//       coolPost: {userId: 1, slug: "coolPost", id: 100, content: "..."}
 //    }
 // }
 

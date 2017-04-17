@@ -32,11 +32,9 @@ const $ = q3y({
 
 $('/me/posts', {userId: 1}).then(console.log);
 
-// {me: { 
-//    posts: {
-//       coolPost: {userId: 1, slug: "coolPost", id: 100, content: "..."}
-//    }
-// }
+//  {"/me/posts": {
+//      coolPost: {userId: 1, slug: "coolPost", id: 100, content: "..."}
+//  }}
 
 ```
 

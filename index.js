@@ -1,4 +1,4 @@
-module.exports = require('./lib/qrry');
+module.exports = require('./lib/q3y');
 
 module.exports.deep     = require('./lib/higherOrder/deep');
 module.exports.hub      = require('./lib/higherOrder/hub');

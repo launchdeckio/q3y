@@ -1,4 +1,4 @@
-# qrry
+# q3y
 
 > Modular hierarchical data querying
 
@@ -16,11 +16,12 @@ only the requested data will be computed.
 #### Example
 
 ```js
-const qrry = require('qrry');
-const {byKey} = qrry;
+const q3y  = require('q3y');
 const Post = require('./models/Post');
 
-const $ = qrry({
+const {byKey} = q3y;
+
+const $ = q3y({
     me: {
         posts: byKey('slug')(({userId}) => {
             
@@ -42,7 +43,7 @@ $('/me/posts', {userId: 1}).then(console.log);
 ### Install
 
 ```bash
-$ npm install qrry
+$ npm install q3y
 ```
 
 ## License
@@ -52,20 +53,20 @@ MIT © [sgtlambda](http://github.com/sgtlambda)
 [![dependency Status][david-image]][david-url]
 [![devDependency Status][david-dev-image]][david-dev-url]
 
-[travis-image]: https://img.shields.io/travis/launchdeckio/qrry.svg?style=flat-square
-[travis-url]: https://travis-ci.org/launchdeckio/qrry
+[travis-image]: https://img.shields.io/travis/launchdeckio/q3y.svg?style=flat-square
+[travis-url]: https://travis-ci.org/launchdeckio/q3y
 
-[codeclimate-image]: https://img.shields.io/codeclimate/github/launchdeckio/qrry.svg?style=flat-square
-[codeclimate-url]: https://codeclimate.com/github/launchdeckio/qrry
+[codeclimate-image]: https://img.shields.io/codeclimate/github/launchdeckio/q3y.svg?style=flat-square
+[codeclimate-url]: https://codeclimate.com/github/launchdeckio/q3y
 
-[david-image]: https://img.shields.io/david/launchdeckio/qrry.svg?style=flat-square
-[david-url]: https://david-dm.org/launchdeckio/qrry
+[david-image]: https://img.shields.io/david/launchdeckio/q3y.svg?style=flat-square
+[david-url]: https://david-dm.org/launchdeckio/q3y
 
-[david-dev-image]: https://img.shields.io/david/dev/launchdeckio/qrry.svg?style=flat-square
-[david-dev-url]: https://david-dm.org/launchdeckio/qrry#info=devDependencies
+[david-dev-image]: https://img.shields.io/david/dev/launchdeckio/q3y.svg?style=flat-square
+[david-dev-url]: https://david-dm.org/launchdeckio/q3y#info=devDependencies
 
-[coveralls-image]: https://img.shields.io/coveralls/launchdeckio/qrry.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/launchdeckio/qrry
+[coveralls-image]: https://img.shields.io/coveralls/launchdeckio/q3y.svg?style=flat-square
+[coveralls-url]: https://coveralls.io/r/launchdeckio/q3y
 
-[npm-image]: https://img.shields.io/npm/v/qrry.svg?style=flat-square
-[npm-url]: https://www.npmjs.com/package/qrry
+[npm-image]: https://img.shields.io/npm/v/q3y.svg?style=flat-square
+[npm-url]: https://www.npmjs.com/package/q3y

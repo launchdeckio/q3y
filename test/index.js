@@ -7,14 +7,14 @@ const expect = require('./support/index');
 const NoDataAtPathError = require('./../lib/errors/NoDataAtPathError');
 
 const deep = require('./../lib/higherOrder/deep');
-const qrry = require('./../');
+const q3y  = require('./../');
 
 const resolve = (resolver, query, context) => {
 
-    return qrry(resolver).resolve(query, context);
+    return q3y(resolver).resolve(query, context);
 };
 
-describe('qrry', () => {
+describe('q3y', () => {
 
     let apps = {
         coolApp:  {userId: 0},

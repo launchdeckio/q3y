@@ -93,7 +93,6 @@ describe('q3y', () => {
         let makeAppResolver = appName => (_, {path}) => {
             if (!path.length) return {name: appName};
             if (path[0] === 'name') return appName;
-            // else return Promise.reject(new NoDataAtPathError(path));
             throw new NoDataAtPathError(path);
         };
 

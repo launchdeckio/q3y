@@ -40,11 +40,11 @@ describe('q3y', () => {
 
         return Promise.all([
 
-            expect(resolve(resolver, {path: 'user.apps'}, 0)).to.eventually.deep.equal({
+            expect(resolve(resolver, {path: 'user/apps'}, 0)).to.eventually.deep.equal({
                 coolApp: {userId: 0},
             }),
 
-            expect(resolve(resolver, {path: 'user.apps'}, 1)).to.eventually.deep.equal({
+            expect(resolve(resolver, {path: 'user/apps'}, 1)).to.eventually.deep.equal({
                 greatApp: {userId: 1},
                 bestApp:  {userId: 1},
             }),
@@ -56,23 +56,23 @@ describe('q3y', () => {
 
         return Promise.all([
 
-            expect(resolve(resolver, {path: 'user.id'}, 1)).to.eventually.equal(1),
-            expect(resolve(resolver, {path: 'user.apps.greatApp'}, 1)).to.eventually.deep.equal({userId: 1}),
-            expect(resolve(resolver, {path: 'user.apps.greatApp'}, 0)).to.eventually.not.be.ok,
-            expect(resolve(resolver, {path: 'user.apps.nonExistentApp'}, 1)).to.eventually.not.be.ok,
+            expect(resolve(resolver, {path: 'user/id'}, 1)).to.eventually.equal(1),
+            expect(resolve(resolver, {path: 'user/apps/greatApp'}, 1)).to.eventually.deep.equal({userId: 1}),
+            expect(resolve(resolver, {path: 'user/apps/greatApp'}, 0)).to.eventually.not.be.ok,
+            expect(resolve(resolver, {path: 'user/apps/nonExistentApp'}, 1)).to.eventually.not.be.ok,
 
         ]);
     });
 
     it('should return static values as well', () => {
 
-        return expect(resolve(resolver, {path: 'user.staticValue'}, 1)).to.eventually.equal('foobarstatic');
+        return expect(resolve(resolver, {path: 'user/staticValue'}, 1)).to.eventually.equal('foobarstatic');
     });
 
     it('should throw when digging too deep', () => {
 
-        return expect(resolve(resolver, {path: 'user.some.non.existent.path'}, 0))
-            .to.be.rejectedWith(/user\.some\.non\.existent\.path/);
+        return expect(resolve(resolver, {path: 'user/some/non/existent/path'}, 0))
+            .to.be.rejectedWith(/user\/some\/non\/existent\/path/);
     });
 
     it('should resolve all properties on the object when not digging deep enough', () => {
@@ -115,7 +115,7 @@ describe('q3y', () => {
 
         it('should individually resolve values if an object is returned and no path was given', () => {
 
-            return expect(resolve(resolver, {path: 'user.apps'})).to.eventually.deep.equal({
+            return expect(resolve(resolver, {path: 'user/apps'})).to.eventually.deep.equal({
                 'some-app':  {name: 'some-app'},
                 'other-app': {name: 'other-app'},
             });
@@ -123,19 +123,19 @@ describe('q3y', () => {
 
         it('should resolve the value if an object is returned and a one-deep path was given', () => {
 
-            return expect(resolve(resolver, {path: 'user.apps.some-app'})).to.eventually.deep.equal({
+            return expect(resolve(resolver, {path: 'user/apps/some-app'})).to.eventually.deep.equal({
                 name: 'some-app',
             });
         });
 
         it('should invoke the returned function with the remainder of the path is a two-or-more-deep path was given', () => {
 
-            return expect(resolve(resolver, {path: 'user.apps.some-app.name'})).to.eventually.equal('some-app');
+            return expect(resolve(resolver, {path: 'user/apps/some-app/name'})).to.eventually.equal('some-app');
         });
 
         it('should throw the appropriate error with a full path when digging too deep into the deep resolver', () => {
 
-            return (expect(resolve(resolver, {path: 'user.apps.some-app.name.stuff'}))).to.be.rejectedWith(/user\.apps\.some-app\.name\.stuff/);
+            return (expect(resolve(resolver, {path: 'user/apps/some-app/name/stuff'}))).to.be.rejectedWith(/user\/apps\/some-app\/name\/stuff/);
         });
     });
 

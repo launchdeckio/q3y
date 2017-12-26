@@ -3,8 +3,6 @@
 > Modular hierarchical data querying
 
 [![Build Status][travis-image]][travis-url]
-[![Code Quality][codeclimate-image]][codeclimate-url]
-[![Code Coverage][coveralls-image]][coveralls-url]
 [![NPM Version][npm-image]][npm-url]
 
 ### wtf?
@@ -54,17 +52,11 @@ MIT © [sgtlambda](http://github.com/sgtlambda)
 [travis-image]: https://img.shields.io/travis/launchdeckio/q3y.svg?style=flat-square
 [travis-url]: https://travis-ci.org/launchdeckio/q3y
 
-[codeclimate-image]: https://img.shields.io/codeclimate/github/launchdeckio/q3y.svg?style=flat-square
-[codeclimate-url]: https://codeclimate.com/github/launchdeckio/q3y
-
 [david-image]: https://img.shields.io/david/launchdeckio/q3y.svg?style=flat-square
 [david-url]: https://david-dm.org/launchdeckio/q3y
 
 [david-dev-image]: https://img.shields.io/david/dev/launchdeckio/q3y.svg?style=flat-square
 [david-dev-url]: https://david-dm.org/launchdeckio/q3y#info=devDependencies
-
-[coveralls-image]: https://img.shields.io/coveralls/launchdeckio/q3y.svg?style=flat-square
-[coveralls-url]: https://coveralls.io/r/launchdeckio/q3y
 
 [npm-image]: https://img.shields.io/npm/v/q3y.svg?style=flat-square
 [npm-url]: https://www.npmjs.com/package/q3y

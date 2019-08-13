@@ -1,11 +1,11 @@
 # q3y
 
-> Modular hierarchical data querying
+> Nested lazily evaluated data. Somewhat like GraphQL, but without the explicit spec part.
 
 [![Build Status][travis-image]][travis-url]
 [![NPM Version][npm-image]][npm-url]
 
-### wtf?
+### Cool. Wait, what?
 
 This module allows you to define a tree-shaped structure that holds all accessible data,
 and query the data at different levels. By using on-demand resolvers (just functions, really),

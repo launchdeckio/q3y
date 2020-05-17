@@ -2,7 +2,6 @@
 
 > Nested lazily evaluated data. Somewhat like GraphQL, but without the explicit spec part.
 
-[![Build Status][travis-image]][travis-url]
 [![NPM Version][npm-image]][npm-url]
 
 ### Cool. Wait, what?
@@ -48,9 +47,6 @@ MIT © [sgtlambda](http://github.com/sgtlambda)
 
 [![dependency Status][david-image]][david-url]
 [![devDependency Status][david-dev-image]][david-dev-url]
-
-[travis-image]: https://img.shields.io/travis/launchdeckio/q3y.svg?style=flat-square
-[travis-url]: https://travis-ci.org/launchdeckio/q3y
 
 [david-image]: https://img.shields.io/david/launchdeckio/q3y.svg?style=flat-square
 [david-url]: https://david-dm.org/launchdeckio/q3y
